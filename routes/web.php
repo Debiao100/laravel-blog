@@ -33,15 +33,28 @@ Route::middleware('auth')->group(function () {
 
 
 
-Route::get('/test',function(){
+Route::get('test',function(){
     $user = [
         'age'=> 17,
         'sadasda',
         'name'=>"张三",
     ];
-    dump($user);
+    return $user;
 });
 
-Route::get('stu',[StuController::class,'getStuLists'])->name('stu.array');
+// Route::get('test2',function(){
+   
+//     return 'HELLO WORLD';
+// });
+Route::get('test2',function(){
+   
+    return view('test2');
+});
+Route::match(['get','update'],'test3',function(){
+   
+    return "helloworld sadsada111";
+});
+
+Route::get('/stu',[StuController::class,'getStuLists'])->name('stu.array');
 
 require __DIR__.'/auth.php';
