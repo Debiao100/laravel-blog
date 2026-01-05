@@ -83,8 +83,6 @@ PHP的一些点：
 
 命名空间的语句 必须是php文件的第一个语句，其他的无效，作用就是表明php文件所在的目录结构，即 所在空间位置，类似于文件的坐标，方便框架来进行打包整理组织。
 
-
-
 ## 类型提示
 
 你看到的 `function (Blueprint $table)` 是 PHP 中**类型提示（Type Hinting）+ 闭包参数** 的写法，核心是「告诉 PHP：这个参数必须是指定类的实例」，结合 Laravel 的闭包传参逻辑，我们拆成两步讲透，保证你能理解：
@@ -160,8 +158,6 @@ function getTables(): array {
 - `Blueprint`：是参数的**类型约束**，限定这个参数必须是 `Blueprint` 类的实例；
 - `$table`：是参数名，代表 Laravel 提前实例化好的 `Blueprint` 对象；
 - 整个写法的目的：让你在闭包里通过 `$table` 操作 `Blueprint` 实例，定义表结构，同时保证类型安全和 IDE 提示。
-
-
 
 ## Inertia.js 的核心就是「无 API 的全栈通信」
 
@@ -272,3 +268,6 @@ Inertia.js 的核心就是「无 API 的全栈通信」—— 它帮你省略了
 - 后端数组的「键」= 前端 props 的「名称」；
 - 后端数组的「值」= 前端 props 的「值」；
 - `defineProps` 只是 Vue 端的“接收+校验”动作，数据的源头是 Laravel 后端。
+
+
+tinajiaS11
